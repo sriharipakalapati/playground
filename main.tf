@@ -32,7 +32,7 @@ output "DynamoDB:arn" {
 module "dev_aws_lambda_policy" {
   asset_id         = "${var.asset_id}"
   environment      = "${var.environment}"
-  source           = "git::https://git.sami.int.thomsonreuters.com/wm_devops/terraform_module_aws_policy.git"
+  source           = "git::https://git.xxxx.com/wm_devops/terraform_module_aws_policy.git"
   name             = "s3_dynamodb_exceptionhub_migration"
   description      = "This policy allows data from the Exception Hub bucket to be transfered to the Exception Hub DynamoDb Table"
   policy_json_file = "./resources/policy_s3_dynamodb_exceptionhub_migration.json"
@@ -50,7 +50,7 @@ output "dev_aws_lambda_policy:arn" {
 # Create Role (and attach Policy) to attach to lambda
 # ###########################################################################################################
 module "dev_aws_role" {
-  source         = "git::https://git.sami.int.thomsonreuters.com/wm_devops/terraform_module_aws_role.git"
+  source         = "git::https://git.xxxx.com/wm_devops/terraform_module_aws_role.git"
   name           = "a204309_role_s3_dynamodb_exceptionhub_migration"
   role_json_file = "./resources/role_lambda.json"
 }
@@ -68,7 +68,7 @@ module "dev_aws_lambda_exceptions_csv_dynamodb" {
   environment          = "${var.environment}"
   resource_owner       = "${var.resource_owner}"
   financial_identifier = "${var.financial_identifier}"
-  source               = "git::https://git.sami.int.thomsonreuters.com/wm_devops/terraform_module_aws_lambda.git"
+  source               = "git::https://git.xxxx.com/wm_devops/terraform_module_aws_lambda.git"
   name                 = "a204309_Dev_Exceptions_Csv_Dynamodb"
   language             = "js"
   zip_file_location    = "./resources/lambda_csv_to_dynamo.zip"
@@ -112,7 +112,7 @@ module "dev_aws_lambda_exceptions_dynamodb" {
   environment          = "${var.environment}"
   resource_owner       = "${var.resource_owner}"
   financial_identifier = "${var.financial_identifier}"
-  source               = "git::https://git.sami.int.thomsonreuters.com/wm_devops/terraform_module_aws_lambda.git"
+  source               = "git::https://git.xxxx.com/wm_devops/terraform_module_aws_lambda.git"
   name                 = "exception_dynamo"
   language             = "js"
   zip_file_location    = "./resources/lambda_dynamodb_exception_access.zip"
