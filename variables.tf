@@ -42,7 +42,7 @@ variable "financial_identifier" {
 
 variable "resource_owner" {
   description = "Resource Owner"
-  default     = "WealthManagement-AWS-ArchitectureTeam@thomsonreuters.com"
+  default     = "Management-AWS-ArchitectureTeam@xxx.com"
 }
 
 variable "tags" {
@@ -52,6 +52,6 @@ variable "tags" {
     "tr:environment-type"             = "dev"
     "tr:application-asset-insight-id" = "204309"
     "tr:financial-identifier"         = "283711002"
-    "tr:resource-owner"               = "WealthManagement-AWS-ArchitectureTeam@thomsonreuters.com"
+    "tr:resource-owner"               = "Management-AWS-ArchitectureTeam@xxx.com"
   }
 }
